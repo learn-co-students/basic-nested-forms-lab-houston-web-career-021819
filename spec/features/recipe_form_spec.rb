@@ -8,7 +8,7 @@ describe "the recipe form", :type => :feature do
     find('input[name="commit"]').click
     expect(Recipe.last.title).to eq 'Chocolate Cake'
   end
-
+ 
   it "adds ingredients" do
     visit '/recipes/new'
     fill_in :recipe_ingredients_attributes_0_quantity, with: '1 cup'
